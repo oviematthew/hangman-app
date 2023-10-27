@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 
    
     @IBAction func onScreen2Tapped(_ sender: UIButton) {
+        
         performSegue(withIdentifier: "gotoScreen2", sender: self)
     }
 }

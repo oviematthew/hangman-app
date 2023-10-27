@@ -92,16 +92,16 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="rYF-CE-3PQ">
                                 <rect key="frame" x="38" y="379.33333333333331" width="318" height="26.333333333333314"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mr1-6c-1Wv">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mr1-6c-1Wv">
                                         <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="26.333333333333332"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wins:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-FC-LPK">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Wins:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-FC-LPK">
                                                 <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyR-lM-0h8">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyR-lM-0h8">
                                                 <rect key="frame" x="61.333333333333336" y="0.0" width="13.333333333333336" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
@@ -109,16 +109,16 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Boa-Hi-Moo">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Boa-Hi-Moo">
                                         <rect key="frame" x="224.66666666666671" y="0.0" width="93.333333333333343" height="26.333333333333332"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Losses:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnb-Tc-kAF">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Losses:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnb-Tc-kAF">
                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3Y-sS-cer">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3Y-sS-cer">
                                                 <rect key="frame" x="80" y="0.0" width="13.333333333333329" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
@@ -184,7 +184,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="End Game" cornerStyle="capsule"/>
                                         <connections>
-                                            <action selector="onExitBtnTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="ApL-Z5-tOY"/>
+                                            <action selector="onExitBtnTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="2IB-Eg-Hha"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoE-bn-5pS">
@@ -201,171 +201,249 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="4dD-Qp-1Eb">
                                         <rect key="frame" x="0.0" y="0.0" width="385.33333333333331" height="34.333333333333336"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azi-wc-cAc">
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azi-wc-cAc">
                                                 <rect key="frame" x="0.0" y="0.0" width="37" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Q" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="W39-lA-vUs"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrJ-5s-fiy">
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrJ-5s-fiy">
                                                 <rect key="frame" x="40.666666666666657" y="0.0" width="40.333333333333343" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="W" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="m17-x6-dtu"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqJ-cl-gFm">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqJ-cl-gFm">
                                                 <rect key="frame" x="84.666666666666671" y="0.0" width="34" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="E" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="Ulj-3u-UDq"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH1-JZ-wZx">
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH1-JZ-wZx">
                                                 <rect key="frame" x="122.33333333333331" y="0.0" width="35" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="R" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="Nfx-bQ-UcK"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDd-iH-vLZ">
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDd-iH-vLZ">
                                                 <rect key="frame" x="161" y="0.0" width="34.666666666666657" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="T" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="6b6-AZ-wRs"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7s4-61-BgP">
+                                            <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7s4-61-BgP">
                                                 <rect key="frame" x="199.33333333333334" y="0.0" width="35" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Y" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="pAt-0p-93t"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfe-gn-zaM">
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfe-gn-zaM">
                                                 <rect key="frame" x="238.00000000000003" y="0.0" width="36.333333333333343" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="U" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="BCV-Ap-uaK"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWx-tJ-kSP">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWx-tJ-kSP">
                                                 <rect key="frame" x="278" y="0.0" width="28.333333333333314" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="I" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="G1V-os-m6K"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWR-ia-gjE">
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWR-ia-gjE">
                                                 <rect key="frame" x="310" y="0.0" width="37" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="O" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="3dj-Ti-gVT"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xc-qP-usJ">
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xc-qP-usJ">
                                                 <rect key="frame" x="350.66666666666669" y="0.0" width="34.666666666666686" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="P" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="iqO-aO-Ieu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="CfM-zQ-G58">
                                         <rect key="frame" x="25" y="60.333333333333371" width="335" height="34.333333333333343"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0x-PL-hpm">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0x-PL-hpm">
                                                 <rect key="frame" x="0.0" y="0.0" width="35.333333333333336" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="A" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="lWp-vZ-a8T"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gf-CE-e9e">
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gf-CE-e9e">
                                                 <rect key="frame" x="38.333333333333329" y="0.0" width="34.666666666666671" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="S" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="XBh-tW-Ro8"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voB-1c-08f">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voB-1c-08f">
                                                 <rect key="frame" x="75.666666666666671" y="0.0" width="36" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="D" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="Gjz-BX-pB0"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gho-jO-kmX">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gho-jO-kmX">
                                                 <rect key="frame" x="114.33333333333333" y="0.0" width="33.333333333333329" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="F" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="MdV-WI-z2k"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZQ-Jh-jsV">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZQ-Jh-jsV">
                                                 <rect key="frame" x="150.33333333333334" y="0.0" width="36.333333333333343" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="G" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="ot8-dq-a0W"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-6w-g3Z">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-6w-g3Z">
                                                 <rect key="frame" x="189.33333333333334" y="0.0" width="36.333333333333343" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="H" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="Nik-wA-ieR"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIO-zZ-Re4">
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIO-zZ-Re4">
                                                 <rect key="frame" x="228.33333333333331" y="0.0" width="33" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="J" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="v2E-FU-F8w"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgw-tj-xUJ">
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgw-tj-xUJ">
                                                 <rect key="frame" x="264" y="0.0" width="35" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="K" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="Owk-J6-ytY"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xT-CQ-dH6">
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xT-CQ-dH6">
                                                 <rect key="frame" x="301.66666666666669" y="0.0" width="33.333333333333314" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="L" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="lLm-qi-2IT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="494-yv-nZ0">
                                         <rect key="frame" x="51.333333333333343" y="120.66666666666661" width="282.66666666666663" height="34.333333333333329"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jm-cb-CV3">
+                                            <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jm-cb-CV3">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Z" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="mEx-e9-4f8"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpa-bM-n5c">
+                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpa-bM-n5c">
                                                 <rect key="frame" x="39.999999999999986" y="0.0" width="35.333333333333329" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="X" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="YlP-jp-CXB"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBl-ee-B2f">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBl-ee-B2f">
                                                 <rect key="frame" x="80.666666666666657" y="0.0" width="36" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="C" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="Ft7-c2-kuX"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u7-sv-XlA">
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u7-sv-XlA">
                                                 <rect key="frame" x="121.66666666666664" y="0.0" width="35.333333333333329" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="V" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="peE-g8-lGG"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-9W-saN">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-9W-saN">
                                                 <rect key="frame" x="162.33333333333331" y="0.0" width="35" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="B" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="cmZ-sd-Umf"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ig-lq-u1w">
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ig-lq-u1w">
                                                 <rect key="frame" x="202.33333333333334" y="0.0" width="36.333333333333343" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="N" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="Ue8-JF-4K1"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU5-N2-9uZ">
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU5-N2-9uZ">
                                                 <rect key="frame" x="243.99999999999997" y="0.0" width="38.666666666666657" height="34.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="M" cornerStyle="capsule" buttonSize="medium"/>
+                                                <connections>
+                                                    <action selector="onAlphabetTapped:" destination="Xup-3G-YuR" eventType="touchUpInside" id="Pl9-P0-eUH"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -396,6 +474,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XxU-Up-eZe"/>
+                    <connections>
+                        <outlet property="answerA" destination="WDc-9S-y01" id="ESg-uu-aJD"/>
+                        <outlet property="answerB" destination="UL9-Lv-fS2" id="dfT-hL-sbh"/>
+                        <outlet property="answerC" destination="LVt-P0-SpT" id="rF3-CN-a3G"/>
+                        <outlet property="answerD" destination="4Zk-p5-7W3" id="7Ti-GS-MKq"/>
+                        <outlet property="answerE" destination="1H7-Wd-4A3" id="rsR-Gq-4XJ"/>
+                        <outlet property="answerF" destination="9X8-wm-5mK" id="1e3-Tl-wR2"/>
+                        <outlet property="answerG" destination="mQM-JF-0pI" id="9je-fT-lNO"/>
+                        <outlet property="gamePicture" destination="zmC-x8-oh1" id="kgc-js-Hln"/>
+                        <outlet property="lossCount" destination="n3Y-sS-cer" id="Bkr-GF-whW"/>
+                        <outlet property="winCount" destination="WyR-lM-0h8" id="DOC-x2-qDe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeX-if-thb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
