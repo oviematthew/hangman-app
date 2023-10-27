@@ -158,6 +158,11 @@ class Screen2ViewController: UIViewController {
               }
           }
       }
+    
+    @IBAction func onTapTryAgain(_ sender: UIButton) {
+        startNewGame()
+    }
+    
   }
 
 
