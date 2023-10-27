@@ -99,6 +99,11 @@ class Screen2ViewController: UIViewController {
           selectedWord = getRandomWord()
           correctGuesses.removeAll()
           remainingGuesses = 5
+          
+          //set  wins and losses to 0
+          winCount.text = "0"
+          lossCount.text = "0"
+          
 
           // Clear labels and reset button styles
           for label in [answerA, answerB, answerC, answerD, answerE, answerF, answerG] {
