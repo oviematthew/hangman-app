@@ -38,6 +38,8 @@ class Screen2ViewController: UIViewController {
     private var wins = 0
     private var losses = 0
 
+    //Reference to start game button
+    var startGameButton: UIButton!
     
     
     let wordsArray = [
@@ -116,6 +118,10 @@ class Screen2ViewController: UIViewController {
 
       @IBAction func onExitBtnTapped(_ sender: UIButton) {
           dismiss(animated: true)
+          
+          
+          //disable start game buttob on previous page
+          startGameButton.isEnabled = false
       }
 
     @IBAction func onAlphabetTapped(_ sender: UIButton) {

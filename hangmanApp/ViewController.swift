@@ -41,6 +41,13 @@ class ViewController: UIViewController {
         
         //clear the username field
         usernameField.text = ""
+        
+        //set the startGameButton on screen2 to screen1 so we can disable it on return
+        viewController.startGameButton = startGameBtn
+    }
+    
+    @IBAction func unwindToViewController(_ unwindSegue: UIStoryboardSegue) {
+        startGameBtn.isEnabled = false
     }
 }
 
