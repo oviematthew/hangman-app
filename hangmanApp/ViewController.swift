@@ -14,5 +14,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func onStartGameTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToScreenTwo", sender: self)
+    }
 }
 

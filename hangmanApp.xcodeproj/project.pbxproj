@@ -13,6 +13,7 @@
 		EE4B848F2AC85F27007F564D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4B848D2AC85F27007F564D /* Main.storyboard */; };
 		EE4B84912AC85F28007F564D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE4B84902AC85F28007F564D /* Assets.xcassets */; };
 		EE4B84942AC85F28007F564D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4B84922AC85F28007F564D /* LaunchScreen.storyboard */; };
+		EEC72D882AEBB64D0034C6F2 /* Screen2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC72D872AEBB64D0034C6F2 /* Screen2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EE4B84902AC85F28007F564D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE4B84932AC85F28007F564D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE4B84952AC85F28007F564D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEC72D872AEBB64D0034C6F2 /* Screen2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		EE4B84862AC85F27007F564D /* hangmanApp */ = {
 			isa = PBXGroup;
 			children = (
+				EEC72D872AEBB64D0034C6F2 /* Screen2ViewController.swift */,
 				EE4B84872AC85F27007F564D /* AppDelegate.swift */,
 				EE4B84892AC85F27007F564D /* SceneDelegate.swift */,
 				EE4B848B2AC85F27007F564D /* ViewController.swift */,
@@ -141,6 +144,7 @@
 				EE4B848C2AC85F27007F564D /* ViewController.swift in Sources */,
 				EE4B84882AC85F27007F564D /* AppDelegate.swift in Sources */,
 				EE4B848A2AC85F27007F564D /* SceneDelegate.swift in Sources */,
+				EEC72D882AEBB64D0034C6F2 /* Screen2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
