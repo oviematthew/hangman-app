@@ -25,6 +25,8 @@ class Screen2ViewController: UIViewController {
     
     @IBOutlet weak var answerG: UILabel!
     
+    var userMessage: String?
+    @IBOutlet weak var hangUserMessage: UILabel!
     
     @IBOutlet weak var winCount: UILabel!
     @IBOutlet weak var lossCount: UILabel!
@@ -83,6 +85,10 @@ class Screen2ViewController: UIViewController {
     override func viewDidLoad() {
           super.viewDidLoad()
          
+        if let hangUserMsg = userMessage {
+            hangUserMessage.text = hangUserMsg
+        }
+        
         startNewGame()
       }
 
@@ -139,7 +145,7 @@ class Screen2ViewController: UIViewController {
               if correctGuesses.count == Set(selectedWord).count {
                   // Handle the user's victory
                   wins += 1
-                  winCount.text = "Wins: \(wins)"
+                  winCount.text = "\(wins)"
                   print("Congratulations! You guessed the word: \(selectedWord)")
                   startNewGame()
               }
@@ -152,7 +158,7 @@ class Screen2ViewController: UIViewController {
               if remainingGuesses == 0 {
                   // Handle the user's loss
                   losses += 1
-                  lossCount.text = "Losses: \(losses)"
+                  lossCount.text = " \(losses)"
                   print("Game Over. The word was: \(selectedWord)")
                   startNewGame()
               }

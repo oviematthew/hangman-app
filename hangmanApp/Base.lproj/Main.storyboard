@@ -35,6 +35,9 @@
                                 <rect key="frame" x="93" y="409" width="207" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onUsernameInput:" destination="BYZ-38-t0r" eventType="editingChanged" id="nvb-6I-YVg"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your username to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXF-mW-dVq">
                                 <rect key="frame" x="25" y="364" width="343" height="20.333333333333314"/>
@@ -61,6 +64,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="startGameBtn" destination="Zd4-E0-pYa" id="km5-zP-Uo5"/>
+                        <outlet property="usernameField" destination="tKH-nK-3qe" id="wHX-Ki-5OD"/>
                         <segue destination="Xup-3G-YuR" kind="show" identifier="gotoScreen2" id="p19-Rg-UKI"/>
                     </connections>
                 </viewController>
@@ -487,6 +492,7 @@
                         <outlet property="answerF" destination="9X8-wm-5mK" id="1e3-Tl-wR2"/>
                         <outlet property="answerG" destination="mQM-JF-0pI" id="9je-fT-lNO"/>
                         <outlet property="gamePicture" destination="zmC-x8-oh1" id="kgc-js-Hln"/>
+                        <outlet property="hangUserMessage" destination="nb3-bL-J9c" id="Era-3E-FRi"/>
                         <outlet property="lossCount" destination="n3Y-sS-cer" id="Bkr-GF-whW"/>
                         <outlet property="winCount" destination="WyR-lM-0h8" id="DOC-x2-qDe"/>
                     </connections>
