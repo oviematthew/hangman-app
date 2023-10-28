@@ -237,7 +237,7 @@ class Screen2ViewController: UIViewController {
     func hintUser() {
         let title = "Hint"
         
-        //using substring to extract the first four letters
+        //extract the first four letters
         if let endIndex = selectedWord.index(selectedWord.startIndex, offsetBy: 4, limitedBy: selectedWord.endIndex) {
             
             let firstFourWords = selectedWord[selectedWord.startIndex..<endIndex]
