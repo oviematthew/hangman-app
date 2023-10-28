@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewController = segue.destination as! Screen2ViewController
         
-        viewController.userMessage = "Let's Hang \(usernameField.text.upp ?? "Let's Hang Someone")"
+        viewController.userMessage = "Let's Hang \(usernameField.text ?? "Let's Hang Someone")"
         
         //clear the username field
         usernameField.text = ""
