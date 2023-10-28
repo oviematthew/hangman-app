@@ -86,47 +86,69 @@ class Screen2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //display message
         if let hangUserMsg = userMessage {
             hangUserMessage.text = hangUserMsg
         }
+        
+        //we do not want to mutilate our private variable called totalGuesses, so we are using a variable reference
         remainingGuesses = self.totalGuesses
         startNewGame()
     }
     
-    @IBAction func onExitBtnTapped(_ sender: UIButton) {
+    //Onclick of end game button
+    @IBAction func onEndGameBtnTapped(_ sender: UIButton) {
         dismiss(animated: true)
+        
+        //disable startGame button on return to first screen
         startGameButton.isEnabled = false
     }
     
+    
+    //onclick of any alphabet button
     @IBAction func onAlphabetTapped(_ sender: UIButton) {
         guard let letter = sender.titleLabel?.text?.lowercased() else {
             return
         }
         
+        //If letter clicked is contained in the selected word
         if selectedWord.contains(letter) {
             correctGuesses.insert(Character(letter))
+            
+            //iterating through the selected word array by index (0 to 6 (7 letter word)) and replace the text of each element in the word labels array and convert it to a string
             for (index, char) in selectedWord.enumerated() {
                 if correctGuesses.contains(char) {
                     wordLabels[index].text = String(char)
                 }
             }
             
-            // Disable the button and mark it green
-            sender.isEnabled = false
-            sender.backgroundColor = .green
+        // Disable the button and mark it green
+        sender.isEnabled = false
+        sender.backgroundColor = .green
             
             // Check if the user has guessed the entire word
             if correctGuesses.count == Set(selectedWord).count {
+                
                 // Handle the user's victory
                 wins += 1
                 winCount.text = "\(wins)"
                 showAlert(isSuccess: true)
             }
-        } else {
-            // The letter is not part of the word
+            
+            
+            
+        }
+        // The letter is not part of the word
+        else {
+            //Reduce number of guesses available to the user
             remainingGuesses -= 1
+            
+            // Disable the button and mark it red
             sender.isEnabled = false
             sender.backgroundColor = .red
+            
+            //change the scene image
             gamePicture.image = UIImage(named: "scene-\(totalGuesses-remainingGuesses+1)")
             
             if remainingGuesses == 0 {
@@ -138,20 +160,28 @@ class Screen2ViewController: UIViewController {
         }
     }
     
+    //onclick of try again button
     @IBAction func onTapTryAgain(_ sender: UIButton) {
         startNewGame()
     }
     
+    
     func startNewGame() {
+        //First Picture to be displayed
+        gamePicture.image = UIImage(named: "scene-1")
+        
         selectedWord = getRandomWord()
         correctGuesses.removeAll()
         remainingGuesses = 5
+        
+        //placing all correct
         wordLabels = [answerA, answerB, answerC, answerD, answerE, answerF, answerG]
         
         for word in wordLabels {
             word.text = "_"
         }
         
+        //iterating through all letters tagged 1 to 26
         for tag in 1...26 {
             if let button = view.viewWithTag(tag) as? UIButton {
                 button.isEnabled = true
@@ -160,12 +190,14 @@ class Screen2ViewController: UIViewController {
         }
     }
     
+    //Random word function
     func getRandomWord() -> String {
         let randomWord = wordsArray.randomElement() ?? ""
         print("Random Word: \(randomWord)")
         return randomWord
     }
     
+    //Alert Function
     func showAlert(isSuccess: Bool) {
         let title = isSuccess ? "Woohoo!" : "Uh oh"
         let message = isSuccess ? "You saved me! Would you like to play again?" : "The correct word was \(selectedWord). Would you like to try again?"
