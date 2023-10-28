@@ -151,7 +151,11 @@ class Screen2ViewController: UIViewController {
             //change the scene image
             gamePicture.image = UIImage(named: "scene-\(totalGuesses-remainingGuesses+1)")
             
-            if remainingGuesses == 0 {
+            if remainingGuesses == 2 {
+                hintUser()
+            }
+            
+            else if remainingGuesses == 0 {
                 // Handle the user's loss
                 losses += 1
                 lossCount.text = " \(losses)"
@@ -212,6 +216,30 @@ class Screen2ViewController: UIViewController {
         alert.addAction(noButton)
         show(alert, sender: nil)
     }
+    
+    
+    func hintUser() {
+        let title = "Hint"
+        
+        //using substring to extract the first four letters
+        if let endIndex = selectedWord.index(selectedWord.startIndex, offsetBy: 4, limitedBy: selectedWord.endIndex) {
+            
+            let firstFourWords = selectedWord[selectedWord.startIndex..<endIndex]
+            
+            let message = "Let's help you out, the first four letters are: \(firstFourWords)..."
+            
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+            let thanksButton = UIAlertAction(title: "Thanks", style: .default) {
+                (alertAction) -> Void in alert.dismiss(animated: true, completion: nil)
+            }
+    
+        alert.addAction(thanksButton)
+        show(alert, sender: nil)
+        }
+    }
+
+
     
 }
 

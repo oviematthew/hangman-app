@@ -47,8 +47,5 @@ class ViewController: UIViewController {
         viewController.startGameButton = startGameBtn
     }
     
-    @IBAction func unwindToViewController(_ unwindSegue: UIStoryboardSegue) {
-        startGameBtn.isEnabled = false
-    }
 }
 
