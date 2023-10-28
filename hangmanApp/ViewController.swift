@@ -48,8 +48,14 @@ class ViewController: UIViewController {
     //passing value to second screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewController = segue.destination as! Screen2ViewController
+            
+        //username
+        viewController.user = "\(usernameField.text ?? "User")"
+
+        //usermessage
+        viewController.userMessage = "Let's hang \(viewController.user ?? "Let's hang someone")"
         
-        viewController.userMessage = "Let's Hang \(usernameField.text ?? "Let's Hang Someone")"
+        
         
         //clear the username field
         usernameField.text = ""

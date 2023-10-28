@@ -25,9 +25,12 @@ class Screen2ViewController: UIViewController {
     
     @IBOutlet weak var answerG: UILabel!
     
+    //values from first screen
     var userMessage: String?
-    @IBOutlet weak var hangUserMessage: UILabel!
+    var user: String?
     
+    
+    @IBOutlet weak var hangUserMessage: UILabel!
     @IBOutlet weak var winCount: UILabel!
     @IBOutlet weak var lossCount: UILabel!
     
@@ -155,6 +158,14 @@ class Screen2ViewController: UIViewController {
                 hintUser()
             }
             
+            //reminder to user
+            else if remainingGuesses == 1{
+                hangUserMessage.text = "One more try \(user ?? "user")"
+                
+                hangUserMessage.textColor = .red
+            }
+        
+            
             else if remainingGuesses == 0 {
                 // Handle the user's loss
                 losses += 1
@@ -171,6 +182,11 @@ class Screen2ViewController: UIViewController {
     
     
     func startNewGame() {
+        
+        //set default message and textcolor
+        hangUserMessage.text = userMessage
+        hangUserMessage.textColor = .black
+        
         //First Picture to be displayed
         gamePicture.image = UIImage(named: "scene-1")
         
@@ -226,7 +242,7 @@ class Screen2ViewController: UIViewController {
             
             let firstFourWords = selectedWord[selectedWord.startIndex..<endIndex]
             
-            let message = "Let's help you out, the first four letters are: \(firstFourWords)..."
+            let message = "The first four letters are: \(firstFourWords)..."
             
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
