@@ -31,16 +31,16 @@ class Screen2ViewController: UIViewController {
     @IBOutlet weak var winCount: UILabel!
     @IBOutlet weak var lossCount: UILabel!
     
-    
+    private let totalGuesses = 5
     private var selectedWord = ""
     private var correctGuesses = Set<Character>()
-    private var remainingGuesses = 5
+    private var remainingGuesses = 0
     private var wins = 0
     private var losses = 0
-
+    private var wordLabels: [UILabel] = []
+    
     //Reference to start game button
     var startGameButton: UIButton!
-    
     
     let wordsArray = [
         "pizzazz", "zyzzyva", "fuzzbox", "pizazzy", "jacuzzi",
@@ -83,103 +83,104 @@ class Screen2ViewController: UIViewController {
         "quipped", "quippus", "quixote", "showbiz", "squawks",
         "tickbox", "upchuck", "steezed", "squeaky", "squozen"
     ]
-
+    
     override func viewDidLoad() {
-          super.viewDidLoad()
-         
+        super.viewDidLoad()
         if let hangUserMsg = userMessage {
             hangUserMessage.text = hangUserMsg
         }
-        
+        remainingGuesses = self.totalGuesses
         startNewGame()
-      }
-
-      func startNewGame() {
-          // Reset the game state
-          selectedWord = getRandomWord()
-          correctGuesses.removeAll()
-          remainingGuesses = 5
-          
-          //set  wins and losses to 0
-          winCount.text = "0"
-          lossCount.text = "0"
-          
-
-          // Clear labels and reset button styles
-          for label in [answerA, answerB, answerC, answerD, answerE, answerF, answerG] {
-              label?.text = ""
-          }
-          for tag in 1...26 {
-              if let button = view.viewWithTag(tag) as? UIButton {
-                  button.isEnabled = true
-                  button.backgroundColor = .clear
-              }
-          }
-      }
-
-      func getRandomWord() -> String {
-          return wordsArray.randomElement() ?? ""
-      }
-
-      @IBAction func onExitBtnTapped(_ sender: UIButton) {
-          dismiss(animated: true)
-          
-          
-          //disable start game buttob on previous page
-          startGameButton.isEnabled = false
-      }
-
-    @IBAction func onAlphabetTapped(_ sender: UIButton) {
-        guard let letter = sender.currentTitle?.first else {
-            return
     }
     
-
-          // Check if the letter is part of the selected word
-          if selectedWord.contains(letter) {
-              correctGuesses.insert(letter)
-
-              // Update labels to display the correct guesses
-              for (index, char) in selectedWord.enumerated() {
-                  if correctGuesses.contains(char) {
-                      if let label = view.viewWithTag(index + 1) as? UILabel {
-                          label.text = String(char)
-                      }
-                  }
-              }
-
-              // Disable the button and mark it green
-              sender.isEnabled = false
-              sender.backgroundColor = .green
-
-              // Check if the user has guessed the entire word
-              if correctGuesses.count == Set(selectedWord).count {
-                  // Handle the user's victory
-                  wins += 1
-                  winCount.text = "\(wins)"
-                  print("Congratulations! You guessed the word: \(selectedWord)")
-                  startNewGame()
-              }
-          } else {
-              // The letter is not part of the word
-              remainingGuesses -= 1
-              sender.isEnabled = false
-              sender.backgroundColor = .red
-
-              if remainingGuesses == 0 {
-                  // Handle the user's loss
-                  losses += 1
-                  lossCount.text = " \(losses)"
-                  print("Game Over. The word was: \(selectedWord)")
-                  startNewGame()
-              }
-          }
-      }
+    @IBAction func onExitBtnTapped(_ sender: UIButton) {
+        dismiss(animated: true)
+        startGameButton.isEnabled = false
+    }
+    
+    @IBAction func onAlphabetTapped(_ sender: UIButton) {
+        guard let letter = sender.titleLabel?.text?.lowercased() else {
+            return
+        }
+        
+        if selectedWord.contains(letter) {
+            correctGuesses.insert(Character(letter))
+            for (index, char) in selectedWord.enumerated() {
+                if correctGuesses.contains(char) {
+                    wordLabels[index].text = String(char)
+                }
+            }
+            
+            // Disable the button and mark it green
+            sender.isEnabled = false
+            sender.backgroundColor = .green
+            
+            // Check if the user has guessed the entire word
+            if correctGuesses.count == Set(selectedWord).count {
+                // Handle the user's victory
+                wins += 1
+                winCount.text = "\(wins)"
+                showAlert(isSuccess: true)
+            }
+        } else {
+            // The letter is not part of the word
+            remainingGuesses -= 1
+            sender.isEnabled = false
+            sender.backgroundColor = .red
+            gamePicture.image = UIImage(named: "scene-\(totalGuesses-remainingGuesses+1)")
+            
+            if remainingGuesses == 0 {
+                // Handle the user's loss
+                losses += 1
+                lossCount.text = " \(losses)"
+                showAlert(isSuccess: false)
+            }
+        }
+    }
     
     @IBAction func onTapTryAgain(_ sender: UIButton) {
         startNewGame()
     }
     
-  }
+    func startNewGame() {
+        selectedWord = getRandomWord()
+        correctGuesses.removeAll()
+        remainingGuesses = 5
+        wordLabels = [answerA, answerB, answerC, answerD, answerE, answerF, answerG]
+        
+        for word in wordLabels {
+            word.text = "_"
+        }
+        
+        for tag in 1...26 {
+            if let button = view.viewWithTag(tag) as? UIButton {
+                button.isEnabled = true
+                button.backgroundColor = .clear
+            }
+        }
+    }
+    
+    func getRandomWord() -> String {
+        let randomWord = wordsArray.randomElement() ?? ""
+        print("Random Word: \(randomWord)")
+        return randomWord
+    }
+    
+    func showAlert(isSuccess: Bool) {
+        let title = isSuccess ? "Woohoo!" : "Uh oh"
+        let message = isSuccess ? "You saved me! Would you like to play again?" : "The correct word was \(selectedWord). Would you like to try again?"
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let yesButton = UIAlertAction(title: "Yes", style: .default){
+            (alertAction) -> Void in self.startNewGame()
+        }
+        let noButton = UIAlertAction(title: "No", style: .default){
+            (alertAction) -> Void in alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(yesButton)
+        alert.addAction(noButton)
+        show(alert, sender: nil)
+    }
+    
+}
 
 
