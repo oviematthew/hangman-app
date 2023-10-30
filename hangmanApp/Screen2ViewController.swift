@@ -133,10 +133,19 @@ class Screen2ViewController: UIViewController {
             // Check if the user has guessed the entire word
             if correctGuesses.count == Set(selectedWord).count {
                 
+                
+                //change the scene image
+                gamePicture.image = UIImage(named: "scene-7")
+                
+                //Message text
+                hangUserMessage.text = "Yayy, you saved \(user ?? "user")"
+                hangUserMessage.textColor = .green
+                
                 // Handle the user's victory
                 wins += 1
                 winCount.text = "\(wins)"
                 showAlert(isSuccess: true)
+                
             }
             
             
