@@ -142,14 +142,14 @@ class Screen2ViewController: UIViewController {
         sender.isEnabled = false
         sender.backgroundColor = .green
             
+            
             // Check if the user has guessed the entire word
             if correctGuesses.count == Set(selectedWord).count {
                 
-                
-                //change the scene image
+                //change the scene image to success image
                 gamePicture.image = UIImage(named: "scene-7")
                 
-                //Message text
+                //Success Message text
                 hangUserMessage.text = "Yayy, you saved \(user ?? "user")"
                 hangUserMessage.textColor = .green
                 
@@ -159,12 +159,10 @@ class Screen2ViewController: UIViewController {
                 showAlert(isSuccess: true)
                 
             }
-            
-            
-            
         }
         // The letter is not part of the word
         else {
+            
             //Reduce number of guesses available to the user
             remainingGuesses -= 1
             
@@ -175,33 +173,37 @@ class Screen2ViewController: UIViewController {
             //change the scene image
             gamePicture.image = UIImage(named: "scene-\(totalGuesses-remainingGuesses+1)")
             
-            if remainingGuesses == 2 {
-                hintUser()
-            }
             
-            //reminder to user
-            else if remainingGuesses == 1{
-                hangUserMessage.text = "One more try \(user ?? "user")"
+                if remainingGuesses == 2 {
+                    //giving the user a hint
+                    hintUser()
+                }
                 
-                hangUserMessage.textColor = .red
-            }
-        
+                //reminder to user
+                else if remainingGuesses == 1{
+                    hangUserMessage.text = "One more try \(user ?? "user")"
+                    
+                    hangUserMessage.textColor = .red
+                }
             
-            else if remainingGuesses == 0 {
-                // Handle the user's loss
-                losses += 1
-                lossCount.text = " \(losses)"
-                showAlert(isSuccess: false)
-            }
+                
+                else if remainingGuesses == 0 {
+                    // Handle the user's loss
+                    losses += 1
+                    lossCount.text = " \(losses)"
+                    showAlert(isSuccess: false)
+                }
         }
     }
     
-    //onclick of try again button
+    
+    //Onclick of try again button
     @IBAction func onTapTryAgain(_ sender: UIButton) {
         startNewGame()
     }
     
     
+    //New Game function
     func startNewGame() {
         
         //set default message and textcolor
@@ -215,7 +217,7 @@ class Screen2ViewController: UIViewController {
         correctGuesses.removeAll()
         remainingGuesses = 5
         
-        //placing all correct
+        //Placing all correct characters in their position
         wordLabels = [answerA, answerB, answerC, answerD, answerE, answerF, answerG]
         
         for word in wordLabels {
@@ -231,12 +233,14 @@ class Screen2ViewController: UIViewController {
         }
     }
     
+    
     //Random word function
     func getRandomWord() -> String {
         let randomWord = wordsArray.randomElement() ?? ""
         print("Random Word: \(randomWord)")
         return randomWord
     }
+    
     
     //Alert Function
     func showAlert(isSuccess: Bool) {
@@ -249,7 +253,7 @@ class Screen2ViewController: UIViewController {
         let noButton = UIAlertAction(title: "No", style: .default){
             (alertAction) -> Void in alert.dismiss(animated: true, completion: nil)
             
-            // Disable all alphabet buttons so the game is not continued
+                    // Disable all alphabet buttons
                    for button in self.alphabetBtns {
                        button.isEnabled = false
                    }
