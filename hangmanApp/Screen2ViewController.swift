@@ -42,8 +42,7 @@ class Screen2ViewController: UIViewController {
     private var losses = 0
     private var wordLabels: [UILabel] = []
     
-    //Reference to start game button
-    var startGameButton: UIButton!
+   
     
     let wordsArray = [
         "pizzazz", "zyzzyva", "fuzzbox", "pizazzy", "jacuzzi",
@@ -103,9 +102,6 @@ class Screen2ViewController: UIViewController {
     //Onclick of end game button
     @IBAction func onEndGameBtnTapped(_ sender: UIButton) {
         dismiss(animated: true)
-        
-        //disable startGame button on return to first screen
-        startGameButton.isEnabled = false
     }
     
     
