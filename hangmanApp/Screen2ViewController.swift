@@ -190,6 +190,7 @@ class Screen2ViewController: UIViewController {
                 else if remainingGuesses == 0 {
                     // Handle the user's loss
                     losses += 1
+                    hangUserMessage.text = "You Couldn't Save \(user ?? "user")"
                     lossCount.text = " \(losses)"
                     showAlert(isSuccess: false)
                 }
@@ -267,23 +268,21 @@ class Screen2ViewController: UIViewController {
     func hintUser() {
         let title = "Hint"
         
-        //extract the first four letters
-        if let endIndex = selectedWord.index(selectedWord.startIndex, offsetBy: 4, limitedBy: selectedWord.endIndex) {
-            
-            let firstFourWords = selectedWord[selectedWord.startIndex..<endIndex]
-            
-            let message = "The first four letters are: \(firstFourWords)..."
+        if selectedWord.count == 7 {
+            let firstFourLetters = String(selectedWord.prefix(4))
+            let message = "The first four letters are: \(firstFourLetters)..."
             
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-            let thanksButton = UIAlertAction(title: "Thanks", style: .default) {
-                (alertAction) -> Void in alert.dismiss(animated: true, completion: nil)
+            
+            let thanksButton = UIAlertAction(title: "Thanks", style: .default) { (alertAction) in
+                alert.dismiss(animated: true, completion: nil)
             }
-    
-        alert.addAction(thanksButton)
-        show(alert, sender: nil)
+            
+            alert.addAction(thanksButton)
+            show(alert, sender: nil)
         }
     }
+
 
 
     
