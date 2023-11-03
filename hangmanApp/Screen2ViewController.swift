@@ -112,6 +112,7 @@ class Screen2ViewController: UIViewController {
         
         //we do not want to mutilate our private variable called totalGuesses, so we are using a variable reference
         remainingGuesses = self.totalGuesses
+        
         startNewGame()
     }
     
