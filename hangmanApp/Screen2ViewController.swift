@@ -11,6 +11,8 @@ class Screen2ViewController: UIViewController {
     
     @IBOutlet weak var gamePicture: UIImageView!
     
+    
+    //All answer positions
     @IBOutlet weak var answerA: UILabel!
     
     @IBOutlet weak var answerB: UILabel!
@@ -25,15 +27,21 @@ class Screen2ViewController: UIViewController {
     
     @IBOutlet weak var answerG: UILabel!
     
+    //keyboard buttons in an array for reference
+    var alphabetBtns: [UIButton] = []
+    
+    
     //values from first screen
     var userMessage: String?
     var user: String?
     
     
+    //Outlets
     @IBOutlet weak var hangUserMessage: UILabel!
     @IBOutlet weak var winCount: UILabel!
     @IBOutlet weak var lossCount: UILabel!
     
+    //Private Variables
     private let totalGuesses = 5
     private var selectedWord = ""
     private var correctGuesses = Set<Character>()
@@ -93,6 +101,14 @@ class Screen2ViewController: UIViewController {
         if let hangUserMsg = userMessage {
             hangUserMessage.text = hangUserMsg
         }
+        
+        
+        // Fill the alphabetButtons array with refs to the alphabet buttons
+            for tag in 1...26 {
+                if let button = view.viewWithTag(tag) as? UIButton {
+                    alphabetBtns.append(button)
+                }
+            }
         
         //we do not want to mutilate our private variable called totalGuesses, so we are using a variable reference
         remainingGuesses = self.totalGuesses
@@ -232,7 +248,11 @@ class Screen2ViewController: UIViewController {
         }
         let noButton = UIAlertAction(title: "No", style: .default){
             (alertAction) -> Void in alert.dismiss(animated: true, completion: nil)
-            self.dismiss(animated: true)
+            
+            // Disable all alphabet buttons so the game is not continued
+                   for button in self.alphabetBtns {
+                       button.isEnabled = false
+                   }
         }
         alert.addAction(yesButton)
         alert.addAction(noButton)
