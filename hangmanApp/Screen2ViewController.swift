@@ -232,6 +232,7 @@ class Screen2ViewController: UIViewController {
         }
         let noButton = UIAlertAction(title: "No", style: .default){
             (alertAction) -> Void in alert.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true)
         }
         alert.addAction(yesButton)
         alert.addAction(noButton)
